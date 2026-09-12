@@ -1,0 +1,252 @@
+:root {
+  --ink: #26324a;
+  --muted: #6d7890;
+  --paper: #fffdf8;
+  --purple: #7057d9;
+  --purple-dark: #5540b7;
+  --yellow: #ffc94a;
+  --mint: #59d5b3;
+  --coral: #ff7d72;
+  --sky: #69b9ef;
+  --pink: #f38bb9;
+  --shadow: 0 18px 45px rgba(63, 52, 112, .12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 201, 74, .16), transparent 18rem),
+    radial-gradient(circle at 90% 30%, rgba(89, 213, 179, .14), transparent 20rem),
+    var(--paper);
+  min-height: 100vh;
+}
+
+button, input { font: inherit; }
+
+button { cursor: pointer; border: 0; }
+
+.topbar {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand { display: flex; align-items: center; gap: 11px; }
+.brand-icon {
+  width: 46px; height: 46px; border-radius: 15px;
+  display: grid; place-items: center;
+  background: var(--purple); color: white;
+  font-family: "Baloo 2"; font-size: 30px; font-weight: 800;
+  box-shadow: 0 8px 18px rgba(112,87,217,.25);
+  transform: rotate(-5deg);
+}
+.brand-name { font: 800 25px "Baloo 2"; line-height: 1; }
+.brand-tagline { font-size: 11px; color: var(--muted); font-weight: 800; letter-spacing: .08em; margin-top: 3px; }
+
+nav { display: flex; align-items: center; gap: 26px; }
+nav a { color: var(--ink); text-decoration: none; font-weight: 800; font-size: 14px; }
+nav a:hover { color: var(--purple); }
+.nav-btn, .primary-btn {
+  background: var(--purple); color: white; border-radius: 14px;
+  padding: 12px 18px; font-weight: 800;
+  box-shadow: 0 9px 20px rgba(112,87,217,.22);
+  transition: transform .2s, background .2s;
+}
+.nav-btn:hover, .primary-btn:hover { transform: translateY(-2px); background: var(--purple-dark); }
+
+.hero {
+  width: min(1180px, 92%);
+  margin: 10px auto 70px;
+  min-height: 510px;
+  border-radius: 34px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  background: linear-gradient(135deg, #eeeaff 0%, #f8f4ff 55%, #fff6e4 100%);
+  box-shadow: var(--shadow);
+}
+
+.hero-content { padding: 68px 35px 60px 68px; position: relative; z-index: 2; }
+.pill, .eyebrow {
+  color: var(--purple); font-size: 11px; font-weight: 900; letter-spacing: .13em;
+}
+.pill {
+  display: inline-block; background: rgba(112,87,217,.1);
+  padding: 9px 13px; border-radius: 100px; margin-bottom: 18px;
+}
+.hero h1 {
+  font: 800 clamp(48px, 6vw, 76px)/.9 "Baloo 2";
+  letter-spacing: -.025em; margin-bottom: 22px;
+}
+.hero h1 span { color: var(--purple); }
+.hero p { max-width: 535px; color: var(--muted); font-size: 17px; line-height: 1.65; font-weight: 600; }
+.hero-actions { display: flex; gap: 12px; margin-top: 27px; }
+.primary-btn { padding: 14px 21px; font-size: 15px; }
+.primary-btn span { margin-left: 8px; }
+.secondary-btn {
+  background: white; color: var(--ink); padding: 14px 20px; border-radius: 14px;
+  font-weight: 800; border: 2px solid #e9e4f8;
+}
+.secondary-btn:hover { border-color: var(--yellow); transform: translateY(-2px); }
+
+.hero-stats { display: flex; gap: 38px; margin-top: 38px; }
+.hero-stats div { display: grid; }
+.hero-stats strong { font: 800 28px "Baloo 2"; color: var(--purple); line-height: 1; }
+.hero-stats small { color: var(--muted); font-weight: 800; margin-top: 4px; }
+
+.hero-art { position: relative; min-height: 510px; }
+.orbit {
+  position: absolute; border: 2px dashed rgba(112,87,217,.25);
+  border-radius: 50%; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+.orbit-1 { width: 330px; height: 330px; }
+.orbit-2 { width: 460px; height: 460px; border-color: rgba(255,125,114,.17); }
+.planet {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-8deg);
+  width: 145px; height: 145px; border-radius: 42% 58% 50% 50%;
+  display: grid; place-items: center; color: white;
+  background: linear-gradient(145deg, var(--purple), #8c70ef);
+  font: 800 70px "Baloo 2";
+  box-shadow: 0 22px 40px rgba(112,87,217,.3);
+}
+.floating-card {
+  position: absolute; padding: 13px 18px; border-radius: 18px;
+  background: white; font: 800 20px "Baloo 2"; box-shadow: 0 15px 30px rgba(61,51,110,.13);
+}
+.card-a { top: 18%; right: 8%; transform: rotate(5deg); color: var(--coral); }
+.card-b { top: 65%; left: 4%; transform: rotate(-8deg); color: var(--yellow); }
+.card-c { bottom: 8%; right: 16%; transform: rotate(6deg); color: var(--mint); }
+.rocket { position: absolute; top: 8%; left: 13%; font-size: 42px; transform: rotate(-18deg); animation: float 3s ease-in-out infinite; }
+.big-number {
+  position: absolute; right: 8%; bottom: 4%;
+  font: 800 56px "Baloo 2"; color: rgba(112,87,217,.12); transform: rotate(-8deg);
+}
+.hero-stars { position: absolute; right: 38%; top: 22px; color: var(--yellow); font-size: 20px; opacity: .8; }
+
+@keyframes float { 50% { transform: translateY(-10px) rotate(-12deg); } }
+
+.section { width: min(1180px, 92%); margin: 0 auto 70px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 28px; }
+.section h2, .mission-banner h2 {
+  font: 800 clamp(30px, 4vw, 43px)/1 "Baloo 2"; margin: 7px 0 7px;
+}
+.section-heading p, .mission-banner p { color: var(--muted); font-weight: 600; }
+.search-box {
+  display: flex; align-items: center; gap: 8px;
+  background: white; border: 2px solid #eee9f8;
+  padding: 10px 14px; border-radius: 15px; width: 250px;
+}
+.search-box input { border: 0; outline: 0; width: 100%; color: var(--ink); background: transparent; font-weight: 700; }
+.class-tabs { display: flex; gap: 9px; margin-bottom: 25px; flex-wrap: wrap; }
+.class-tab {
+  background: white; color: var(--muted); border: 2px solid #eee9f8;
+  padding: 10px 17px; border-radius: 13px; font-weight: 900;
+}
+.class-tab.active { background: var(--purple); border-color: var(--purple); color: white; box-shadow: 0 8px 18px rgba(112,87,217,.18); }
+
+.topic-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px;
+}
+.topic-card {
+  position: relative; overflow: hidden; min-height: 188px;
+  padding: 22px; border-radius: 23px; background: white;
+  border: 2px solid #f0edf8; box-shadow: 0 8px 25px rgba(67,58,111,.055);
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.topic-card:hover { transform: translateY(-5px); box-shadow: 0 18px 35px rgba(67,58,111,.11); border-color: #dcd4fb; }
+.topic-icon {
+  width: 49px; height: 49px; border-radius: 15px; display: grid; place-items: center;
+  font-size: 24px; margin-bottom: 14px;
+}
+.topic-card h3 { font: 800 22px "Baloo 2"; margin-bottom: 4px; }
+.topic-card p { color: var(--muted); font-size: 13px; line-height: 1.45; font-weight: 600; max-width: 280px; }
+.topic-number {
+  position: absolute; right: 17px; top: 13px;
+  font: 800 34px "Baloo 2"; color: #eeeaf7;
+}
+.topic-link {
+  position: absolute; bottom: 16px; right: 18px; color: var(--purple);
+  font-weight: 900; font-size: 12px; opacity: 0; transition: opacity .2s;
+}
+.topic-card:hover .topic-link { opacity: 1; }
+
+.no-results { text-align: center; padding: 40px; background: white; border-radius: 20px; color: var(--muted); font-weight: 800; }
+.hidden { display: none; }
+
+.mission-banner {
+  width: min(1180px, 92%); margin: 0 auto 70px;
+  border-radius: 28px; padding: 30px 35px;
+  background: #26324a; color: white;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px;
+}
+.mission-banner .eyebrow { color: var(--yellow); }
+.mission-banner p { color: #bfc6d6; }
+.mission-icon { width: 66px; height: 66px; display: grid; place-items: center; background: #3a4660; border-radius: 20px; font-size: 34px; }
+.journey { display: flex; align-items: center; gap: 15px; }
+.journey div { display: grid; justify-items: center; gap: 4px; }
+.journey b {
+  width: 35px; height: 35px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--yellow); color: var(--ink); font-weight: 900;
+}
+.journey span { font-size: 11px; color: #c9cede; font-weight: 800; }
+.journey i { color: #75809a; font-style: normal; }
+
+footer {
+  border-top: 1px solid #eee9f2; padding: 28px 5%;
+  display: flex; align-items: center; justify-content: space-between; gap: 15px;
+  color: var(--muted); font-size: 13px;
+}
+footer strong { color: var(--ink); font: 800 22px "Baloo 2"; }
+.footer-badge { background: #fff4cf; color: #9a7100; padding: 8px 13px; border-radius: 100px; font-weight: 800; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 25px; transform: translate(-50%, 80px);
+  background: #26324a; color: white; padding: 13px 20px; border-radius: 13px;
+  box-shadow: var(--shadow); font-weight: 800; opacity: 0; transition: .3s; z-index: 20;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 900px) {
+  nav a { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-content { padding: 55px 35px 30px; }
+  .hero-art { min-height: 330px; }
+  .planet { width: 110px; height: 110px; font-size: 55px; }
+  .orbit-1 { width: 260px; height: 260px; }
+  .orbit-2 { width: 350px; height: 350px; }
+  .topic-grid { grid-template-columns: repeat(2, 1fr); }
+  .mission-banner { grid-template-columns: auto 1fr; }
+  .journey { grid-column: 1 / -1; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .topbar { min-height: 70px; }
+  .nav-btn { padding: 10px 12px; font-size: 12px; }
+  .hero { margin-top: 0; border-radius: 25px; }
+  .hero-content { padding: 42px 24px 20px; }
+  .hero h1 { font-size: 51px; }
+  .hero p { font-size: 15px; }
+  .hero-actions { flex-direction: column; }
+  .hero-stats { gap: 25px; }
+  .hero-art { min-height: 280px; }
+  .card-a { right: 2%; }
+  .card-c { right: 5%; }
+  .section-heading { align-items: stretch; flex-direction: column; }
+  .search-box { width: 100%; }
+  .topic-grid { grid-template-columns: 1fr; }
+  .mission-banner { grid-template-columns: 1fr; text-align: center; padding: 25px; }
+  .mission-icon { margin: auto; }
+  .journey { gap: 8px; }
+  footer { flex-direction: column; text-align: center; }
+}

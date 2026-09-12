@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Quest | Olympiad Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">∑</div>
+      <div>
+        <div class="brand-name">Math Quest</div>
+        <div class="brand-tagline">Learn • Explore • Shine</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#topics">Topics</a>
+      <a href="#how-it-works">How It Works</a>
+      <button class="nav-btn" onclick="scrollToTopics()">Start Learning 🚀</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-stars">✦　✧　✦　✧</div>
+      <div class="hero-content">
+        <div class="pill">🏆 OLYMPIAD MATH • CLASSES 1–5</div>
+        <h1>Turn Math Into<br><span>an Adventure!</span></h1>
+        <p>Explore exciting Olympiad topics, build smart thinking skills, and become a confident math explorer.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="scrollToTopics()">Explore Topics <span>→</span></button>
+          <button class="secondary-btn" onclick="showFunFact()">✨ Surprise Me</button>
+        </div>
+        <div class="hero-stats">
+          <div><strong>5</strong><small>Standards</small></div>
+          <div><strong>30+</strong><small>Topics</small></div>
+          <div><strong>∞</strong><small>Fun</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="planet">π</div>
+        <div class="floating-card card-a">7 × 8 = ?</div>
+        <div class="floating-card card-b">★ ★ ★</div>
+        <div class="floating-card card-c">½ + ¼</div>
+        <div class="rocket">🚀</div>
+        <div class="big-number">123</div>
+      </div>
+    </section>
+
+    <section class="section" id="topics">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CHOOSE YOUR MISSION</span>
+          <h2>Olympiad Topics by Standard</h2>
+          <p>Pick a class and discover the skills waiting for you.</p>
+        </div>
+        <div class="search-box">
+          <span>🔎</span>
+          <input id="searchInput" type="search" placeholder="Search a topic..." oninput="filterTopics()" />
+        </div>
+      </div>
+
+      <div class="class-tabs" id="classTabs">
+        <button class="class-tab active" data-class="1">Class 1</button>
+        <button class="class-tab" data-class="2">Class 2</button>
+        <button class="class-tab" data-class="3">Class 3</button>
+        <button class="class-tab" data-class="4">Class 4</button>
+        <button class="class-tab" data-class="5">Class 5</button>
+      </div>
+
+      <div id="topicGrid" class="topic-grid"></div>
+      <div id="noResults" class="no-results hidden">🌈 No matching topics yet. Try another search!</div>
+    </section>
+
+    <section class="mission-banner" id="how-it-works">
+      <div class="mission-icon">🧠</div>
+      <div>
+        <span class="eyebrow">YOUR OLYMPIAD JOURNEY</span>
+        <h2>Learn it. Practice it. Master it.</h2>
+        <p>Start with a topic, understand the idea, then challenge your brain with Olympiad-style thinking.</p>
+      </div>
+      <div class="journey">
+        <div><b>1</b><span>Learn</span></div>
+        <i>→</i>
+        <div><b>2</b><span>Practice</span></div>
+        <i>→</i>
+        <div><b>3</b><span>Challenge</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Math Quest</strong> 🧮</div>
+    <p>Making young mathematicians curious, clever & confident.</p>
+    <div class="footer-badge">⭐ Keep Exploring!</div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
