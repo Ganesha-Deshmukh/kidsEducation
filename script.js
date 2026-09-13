@@ -1,4 +1,3 @@
-```javascript
 const topics = {
   1: [
     ["🔢", "Number Sense", "Counting, comparing numbers, place value and number patterns.", "sky"],
@@ -44,7 +43,7 @@ const topics = {
     ["📊", "Data & Graphs", "Tables, graphs, averages and interpreting information.", "pink"],
     ["🏆", "Olympiad Challenge", "Mixed-concept puzzles that require creativity and deep thinking.", "purple"]
   ]
-];
+};
 
 const colors = {
   sky: "#e9f6ff",
@@ -158,4 +157,3 @@ document.querySelectorAll(".class-tab").forEach(tab => {
 });
 
 renderTopics();
-```
